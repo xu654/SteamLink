@@ -1,6 +1,6 @@
-name: SteamLink
-display_name: SteamLink
-desc: 自动识别群内 Steam 商店链接或“/查找 AppID”，获取并展示游戏信息（支持封面图、字段开关、滚动限速）。
+name: astrbot_plugin_SteamLink
+display_name: Steam游戏查找识别
+desc: 自动识别群内 Steam 商店链接，并获取游戏信息发送到群里。\n\n支持自动解析 Steam 链接或通过 /查找 AppID或者 /steam AppID 查询。\n\n适用于 AstrBot\n\n建议部署到非国内的服务器，避免网络问题，同时也能支持锁区游戏
 version: v1.0.0
 author: xu654
 repo: https://github.com/xu654/SteamLink
