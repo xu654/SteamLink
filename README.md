@@ -142,7 +142,7 @@ AstrBot 会自动安装依赖。
 
 ```
 
-[https://store.steampowered.com/app/1551360/](https://store.steampowered.com/app/1551360/)
+https://store.steampowered.com/app/1551360/
 
 ```
 
