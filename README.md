@@ -1,6 +1,3 @@
-# 一、SteamLink 插件 README.md
-
-```markdown
 # SteamLink
 
 自动识别群内 Steam 商店链接，并获取游戏信息发送到群里。
@@ -107,23 +104,6 @@ API 请求语言顺序：
 
 ---
 
-# 插件结构
-
-```
-
-SteamLink
-│
-├─ main.py
-├─ metadata.yaml
-├─ requirements.txt
-├─ _conf_schema.json
-│
-└─ utils
-├─ steam_api.py
-├─ rate.py
-└─ join.py
-
-```
 
 说明：
 
@@ -147,45 +127,6 @@ httpx
 
 AstrBot 会自动安装依赖。
 
----
-
-# 安装方式
-
-### 方法1 WebUI安装
-
-在 AstrBot 管理页面：
-
-```
-
-插件管理
-→ 上传插件
-→ 选择 SteamLink.zip
-
-```
-
----
-
-### 方法2 手动安装
-
-将插件放入：
-
-```
-
-data/plugins/
-
-```
-
-例如：
-
-```
-
-data/plugins/SteamLink
-
-```
-
-然后重启 AstrBot。
-
----
 
 # 使用示例
 
