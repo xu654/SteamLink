@@ -128,42 +128,6 @@ httpx
 AstrBot 会自动安装依赖。
 
 
-# 使用示例
-
-群内发送：
-
-```
-
-/查找 1551360
-
-```
-
-或
-
-```
-
-https://store.steampowered.com/app/1551360/
-
-```
-
-机器人返回：
-
-```
-
-🎮 极限竞速：地平线 5 / Forza Horizon 5
-🆔 AppID: 1551360
-📦 类型: game
-🏷️ 分类: 动作、竞速、体育
-👨‍💻 开发商: Playground Games
-🏢 发行商: Xbox Game Studios
-📅 发售: 2021 年 11 月 8 日
-
-```
-
-并附带封面图。
-
----
-
 # 作者
 
 xu654
