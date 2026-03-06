@@ -1,0 +1,50 @@
+{
+  "enabled": {
+    "type": "bool",
+    "description": "启用 SteamLink",
+    "default": true
+  },
+  "download_images": {
+    "type": "bool",
+    "description": "是否下载封面图到本地再发送（否则直接用 URL）",
+    "default": false,
+    "hint": "某些平台对外链图片不稳定时可开启。"
+  },
+  "http_timeout_seconds": {
+    "type": "float",
+    "description": "Steam API 请求超时（秒）",
+    "default": 8.0
+  },
+  "max_concurrency": {
+    "type": "int",
+    "description": "并发请求上限",
+    "default": 10
+  },
+
+  "rate_window_seconds": {
+    "type": "int",
+    "description": "滚动限速窗口（秒）",
+    "default": 600
+  },
+  "rate_max_requests": {
+    "type": "int",
+    "description": "窗口内最大请求数",
+    "default": 300
+  },
+  "rate_limited_text": {
+    "type": "string",
+    "description": "触发限速时的提示文本",
+    "default": "已限速：10分钟内请求次数过多，请 {seconds}s 后重试。"
+  },
+
+  "show_header_image": { "type": "bool", "description": "显示封面图（header_image，置顶）", "default": true },
+  "show_name": { "type": "bool", "description": "显示游戏名称（优先中文，若有英文则双语）", "default": true },
+  "show_appid": { "type": "bool", "description": "显示 AppID", "default": true },
+  "show_type": { "type": "bool", "description": "显示类型（game/dlc）", "default": true },
+  "show_dlc_list": { "type": "bool", "description": "显示 DLC 列表（可能没有）", "default": false },
+  "show_short_description": { "type": "bool", "description": "显示短介绍 short_description", "default": true },
+  "show_content_descriptors": { "type": "bool", "description": "显示内容提示 content_descriptors.notes（为空则不显示）", "default": true },
+  "show_genres": { "type": "bool", "description": "显示分类 genres", "default": true },
+  "show_developers_publishers": { "type": "bool", "description": "显示开发商/发行商", "default": true },
+  "show_release_date": { "type": "bool", "description": "显示发售时间（含 coming_soon）", "default": true }
+}

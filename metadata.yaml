@@ -1,0 +1,10 @@
+name: SteamLink
+display_name: SteamLink
+desc: 自动识别群内 Steam 商店链接或“/查找 AppID”，获取并展示游戏信息（支持封面图、字段开关、滚动限速）。
+version: v1.0.0
+author: xu654
+repo: https://github.com/xu654/SteamLink
+
+# 依赖声明
+requirements:
+  - httpx
