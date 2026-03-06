@@ -18,12 +18,12 @@
 
 ```
 
-[https://store.steampowered.com/app/1551360/](https://store.steampowered.com/app/1551360/)
+https://store.steampowered.com/app/1551360/
 
 ```
 ```
 
-[https://store.steampowered.com/app/1551360?snr=5000_5100](https://store.steampowered.com/app/1551360?snr=5000_5100)__
+https://store.steampowered.com/app/1551360?snr=5000_5100
 
 ```
 
