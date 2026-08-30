@@ -2,10 +2,14 @@
 import os
 import json
 import hashlib
+import inspect
 from dataclasses import dataclass
 from typing import Any, Dict, Optional, Tuple, List
 
 import httpx
+
+# httpx 0.29+ 用 proxies= 字典；0.28 及更早用 proxy= 单数（实测 0.28.1 不支持 proxies=）
+_USE_PROXIES_KW = "proxies" in inspect.signature(httpx.AsyncClient.__init__).parameters
 
 
 class SteamAPIError(Exception):
@@ -24,8 +28,8 @@ class SteamAppData:
 class SteamAPI:
     BASE = "https://store.steampowered.com/api/appdetails"
 
-    def __init__(self, timeout_seconds: float = 8.0, download_images: bool = False):
-        self._client = httpx.AsyncClient(
+    def __init__(self, timeout_seconds: float = 8.0, download_images: bool = False, proxy: str = ""):
+        kwargs = dict(
             timeout=timeout_seconds,
             headers={
                 # 优先中文 -> 繁体 -> 英文
@@ -34,6 +38,13 @@ class SteamAPI:
             },
             follow_redirects=True,
         )
+        if proxy:
+            # 同一客户端同时服务接口请求与封面图下载，代理一并生效
+            if _USE_PROXIES_KW:
+                kwargs["proxies"] = {"http://": proxy, "https://": proxy}
+            else:
+                kwargs["proxy"] = proxy
+        self._client = httpx.AsyncClient(**kwargs)
         self.download_images = download_images
 
         # 下载缓存目录（插件目录下）
