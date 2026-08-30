@@ -4,6 +4,12 @@
     "description": "启用 SteamLink",
     "default": true
   },
+  "proxy": {
+    "type": "string",
+    "description": "HTTP 代理地址（留空 = 直连）",
+    "default": "",
+    "hint": "Steam 商店 API 无法直连时填写，如 http://127.0.0.1:7997（Clash）。作用于接口请求与封面图下载，也支持 socks5://"
+  },
   "download_images": {
     "type": "bool",
     "description": "是否下载封面图到本地再发送（否则直接用 URL）",
