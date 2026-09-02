@@ -34,10 +34,11 @@ class SteamLinkPlugin(Star):
         max_req = int(self.config.get("rate_max_requests", 300))
         self._limiter = RollingRateLimiter(window_seconds=window_sec, max_requests=max_req)
 
-        # Steam API
+        # Steam API（proxy：Clash 等本地代理，留空直连）
         self._api = SteamAPI(
             timeout_seconds=float(self.config.get("http_timeout_seconds", 8.0)),
             download_images=bool(self.config.get("download_images", False)),
+            proxy=str(self.config.get("proxy", "") or "").strip(),
         )
 
     @filter.event_message_type(filter.EventMessageType.GROUP_MESSAGE)
